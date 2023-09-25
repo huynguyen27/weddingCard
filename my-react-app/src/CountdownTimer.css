@@ -1,0 +1,31 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.countdown-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .time-box {
+        width: 80px;
+        height: 80px;
+    }
+}

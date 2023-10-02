@@ -26,15 +26,11 @@ const GuestInfo = () => {
     <div>
       {guestInfo ? (
         <>
-          <h2>Guest Information</h2>
-          <p>Name: {guestInfo.name}</p>
-          <p>Email: {guestInfo.email}</p>
-          <p>Phone: {guestInfo.phoneNumber}</p>
-          <p>Transportation: {guestInfo.transportation}</p>
-          <p>Age: {guestInfo.age}</p>
+          <h2>Thông Tin Khách Mời</h2>
+          <p>Tên: {guestInfo.name}</p>
         </>
       ) : (
-        <p>Loading...</p>
+        <p>Đang tải...</p>
       )}
     </div>
   );

@@ -47,8 +47,6 @@ const GuestList = () => {
     });
   };
 
-
-
   return (
     <div>
       <h2>Tất Cả Các Khách</h2>

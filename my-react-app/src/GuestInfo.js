@@ -28,6 +28,7 @@ const GuestInfo = () => {
         <>
           <h2>Thông Tin Khách Mời</h2>
           <p>Tên: {guestInfo.name}</p>
+          <p>Xưng Hô: {guestInfo.terms_of_address}</p>
         </>
       ) : (
         <p>Đang tải...</p>

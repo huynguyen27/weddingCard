@@ -1,0 +1,104 @@
+/* Resetting browser-default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Make the container full width and center its content */
+.invitation-container {
+    display: flex;
+    flex-direction: column;
+    /* Makes the items stack vertically */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    /* Minimum full viewport height */
+    background-color: white;
+    overflow: auto;
+    /* Enables scrolling if content overflows */
+}
+
+/* Wrap the image and give white background */
+.image-wrapper {
+    position: relative;  /* Add this */
+    background-color: white;
+    margin-top: -5px;
+    width: 550px;  /* Specify the width */
+    height: 775px;  /* Specify the max height */
+    overflow: hidden;  /* Clip any excess */
+}
+
+/* Add margin-bottom only to the last child of the image wrapper */
+.image-wrapper:last-child {
+    margin-bottom: 20px;
+}
+
+/* Style the image */
+.wedding-image {
+    width: 100%;  /* Full width of the wrapper */
+    height: auto;  /* Full height of the wrapper */
+    object-fit: cover;  /* Cover the wrapper entirely */
+    object-position: center;  /* Clip from the center */
+}
+
+/* Wrap the video and give white background */
+.media-wrapper {
+    background-color: white;
+}
+
+/* Style the video */
+.wedding-video {
+    width: 550px;
+    /* Set width to 680px */
+    height: auto;
+    /* Keep aspect ratio */
+    max-width: 100%;
+    /* Make it responsive */
+    object-fit: contain;
+    /* Ensures the video scales nicely */
+}
+
+/* For smaller screens, you can add a media query */
+@media only screen and (max-width: 700px) {
+
+    .wedding-video,
+    .wedding-image {
+        width: 100%;
+        /* Full width */
+    }
+}
+
+.nav-wrapper {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);  /* This will center the whole nav-wrapper */
+    z-index: 2;
+    display: flex;
+    gap: 20px;
+}
+
+
+.nav-button {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.nav-button.active {
+    background-color: #444;
+}
+
+/* .wedding-image {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.wedding-image.show {
+    opacity: 1;
+} */

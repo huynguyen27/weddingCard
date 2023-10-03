@@ -9,13 +9,12 @@ const App = () => {
 		<>
 			<Router>
 				<Routes>
-					<Route path="/admin" element={<Main />} />
-					<Route path="/:guestId" element={<GuestInfo />} />
+					<Route path="/admin" element={<Main />} /> {/* Explicitly name admin */}
+					<Route path="/guest/:guestId" element={<GuestInfo />} /> {/* Explicit path for guests */}
 					<Route path="/" element={<GuestInvitation />} />
 				</Routes>
 			</Router>
 		</>
 	);
 };
-
 export default App;

@@ -56,11 +56,11 @@ const GuestList = () => {
             <span>Tên Khách: {guest.name}, </span>
             <span>Xưng Hô: {guest.terms_of_address}, </span>
             {/* Updated Line: Wrap the guest id inside a Link component */}
-            <Link to={`/${guest.id}`}>
+            <Link to={`/guest/${guest.id}`}>
               <span>Link</span>
             </Link>
-            <span> {window.location.origin}/{guest.id}</span>
-            <button onClick={() => copyToClipboard(`${window.location.origin}/${guest.id}`, guest.id)}>
+            <span> {window.location.origin}/guest/{guest.id}</span>
+            <button onClick={() => copyToClipboard(`${window.location.origin}/guest/${guest.id}`, guest.id)}>
               Copy
             </button>
             {copySuccess.status && copySuccess.id === guest.id && <span style={{ color: 'green' }}>{copySuccess.status}</span>}

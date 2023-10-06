@@ -1,31 +1,74 @@
-.container {
+.countdown-container {
     text-align: center;
-    margin-top: 50px;
-}
-
-.countdown-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.time-box {
-    background-color: #f2f2f2;
-    border-radius: 15px;
-    padding: 20px;
-    margin: 10px;
-    width: 100px;
-    height: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    position: relative;
+    margin-top: -2px;
+}
+
+.countdown-wrapper {
+    position: relative;
+    /* Add this */
+    background-color: rgba(0, 0, 0, 0.35);
+    width: 550px;
+    height: 225px;
     align-items: center;
 }
 
-@media (max-width: 768px) {
-    .time-box {
-        width: 80px;
-        height: 80px;
-    }
+.countdown-table {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
 }
+
+.coming-soon {
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 200;
+    font-size: 42px;
+    margin: 16px 0px 4px 0;
+    color: white;
+
+}
+
+.countdown-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    margin: 0 6px;
+}
+
+.countdown-number {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 68px;
+    margin: 0;
+}
+
+.countdown-label {
+    margin-top: 8px;
+    font-family: serif;
+    font-size: 13px;
+}
+
+.countdown-separator {
+    font-size: 68px;
+}
+
+/* For smaller screens, you can add a media query */
+
+/* @media only screen and (max-width: 768px) {
+
+    .countdown-table,
+    .coming-soon {
+        width: 100%;
+    }
+} */

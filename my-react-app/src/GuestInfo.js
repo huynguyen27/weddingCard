@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from './FirebaseConfig';
+import GuestInvitation from './GuestInvitation.js';
+import CountdownTimer from './CountdownTimer.js';
+import WeddingMap from './WeddingMap.js';
 
 const GuestInfo = () => {
   const { guestId } = useParams();
@@ -22,16 +25,22 @@ const GuestInfo = () => {
     fetchGuestInfo();
   }, [guestId]);
 
+  useEffect(() => {
+    // Set the document title to the guest's name
+    document.title = guestInfo ? `Thân mời ${guestInfo.terms_of_address} ${guestInfo.name}` : 'Wedding Cherish';
+  }, [guestInfo]);
+
   return (
     <div>
       {guestInfo ? (
         <>
-          <h2>Thông Tin Khách Mời</h2>
-          <p>Tên: {guestInfo.name}</p>
-          <p>Xưng Hô: {guestInfo.terms_of_address}</p>
+          <GuestInvitation />
+          <CountdownTimer />
+          <WeddingMap />
+
         </>
       ) : (
-        <p>Đang tải...</p>
+        <p>Loading...</p>
       )}
     </div>
   );

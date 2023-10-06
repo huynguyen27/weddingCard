@@ -1,17 +1,15 @@
 import React from 'react';
 import RSVPForm from './RSVPForm';
 import GuestList from './GuestList';
-
-import CountdownTimer from './CountdownTimer';
-import WeddingMap from './WeddingMap';
+import NavigationBar from './NavigationBar';
 
 const Main = () => {
   return (
     <div>
+      <NavigationBar />
       <RSVPForm />
       <GuestList />
-      {/* <CountdownTimer/>
-      <WeddingMap/> */}
+
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from React Router
 import './css/GuestInvitation.css'; // Importing the CSS file
 import weddingVideo from './assets/wedding-gif.mp4';  // Importing the video
 import weddingCover1 from './assets/wedding-cover-1.jpg';  // Importing the image
@@ -14,7 +15,7 @@ const GuestInvitation = () => {
     const timer = setInterval(() => {
       setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
     }, 3000);
-    
+
     return () => clearInterval(timer); // Cleanup
   }, [images.length]);
 
@@ -41,10 +42,8 @@ const GuestInvitation = () => {
           ))}
         </div>
       </div>
-
     </div>
   );
 };
-
 
 export default GuestInvitation;

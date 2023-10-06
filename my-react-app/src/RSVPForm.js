@@ -3,10 +3,31 @@ import React, { useState } from 'react';  // Importing React and the useState ho
 import './css/RSVPForm.css';              // Importing custom CSS for styling the component
 import { db } from './FirebaseConfig';    // Importing the Firestore database instance
 import { addDoc, collection } from 'firebase/firestore';  // Firestore methods for collection and adding documents
+import { useLanguage } from './LanguageContext';
 
 // import { useNavigate } from "react-router-dom";
 
 const RSVPForm = () => {
+  const { currentLanguage } = useLanguage();
+
+  // Define language-specific content
+  const languageContent = {
+    English: {
+      rsvpLabel: 'Send Wedding Invitation To Guest',
+      nameLabel: 'Name:',
+      termsLabel: 'Term of Address:',
+      // ... other English labels
+    },
+    Vietnamese: {
+      rsvpLabel: 'Gửi Thiệp Mời Cho Khách',
+      nameLabel: 'Tên:',
+      termsLabel: 'Xưng Hô:',
+      // ... other Vietnamese labels
+    },
+  };
+
+  const labels = languageContent[currentLanguage];
+
   // State Management
   const [formData, setFormData] = useState({ // State to store form data
     name: '',
@@ -92,10 +113,10 @@ const RSVPForm = () => {
     // JSX layout for the form
 
     <div className="form-container">
-      <h2>Gửi Thiệp Mời Cho Khách</h2>
+      <h2>{labels.rsvpLabel}</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label>Tên:</label>
+          <label>{labels.nameLabel}</label>
           <input
             type="text"
             name="name"
@@ -106,7 +127,7 @@ const RSVPForm = () => {
 
 
         <div className="form-group">
-          <label>Tên Xưng Hô:</label>
+          <label>{labels.termsLabel}</label>
           <select name="terms_of_address" onChange={handleChange}>
             <option value="">Chọn</option>
             <option value="anh">Anh</option>

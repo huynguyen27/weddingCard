@@ -1,0 +1,14 @@
+.simpleslide100 {
+    position: absolute;
+    display: flex;
+    z-index: 0;
+    justify-content: center;
+}
+
+.simpleslide100-item {
+    position: absolute;
+    width: 550px;
+    height: 225px;
+    background-position: center;
+    background-size: cover;
+}

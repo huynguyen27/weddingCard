@@ -17,13 +17,13 @@ const customIcon = new L.Icon({
 });
 
 // Address variable
-const address = 'Vinhomes Central Park, 208 Nguyen Huu Canh Street, Binh Thanh District';
+const address = 'White Palace, 194 Hoang Van Thu Street, Ward 9, Phu Nhuan District';
 
 
 // WeddingMap React functional component
 const WeddingMap = () => {
   // Setting initial map position using latitude and longitude coordinates
-  const position = [10.792438127183601, 106.72269343890265];
+  const position = [10.800138493663958, 106.67480762278619];
   const [isTooltipVisible, setTooltipVisible] = useState(true); // Tooltip is initially visible
 
   const toggleTooltip = () => {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { doc, getDoc } from 'firebase/firestore';
-import { db } from './FirebaseConfig';
+import { db } from './firebase/FirebaseConfig';
 import GuestInvitation from './GuestInvitation.js';
 import CountdownTimer from './CountdownTimer.js';
 import WeddingMap from './WeddingMap.js';

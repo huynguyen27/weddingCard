@@ -1,7 +1,7 @@
 // Importing essential libraries and modules
 import React, { useState } from 'react';  // Importing React and the useState hook
 import './css/RSVPForm.css';              // Importing custom CSS for styling the component
-import { db } from './FirebaseConfig';    // Importing the Firestore database instance
+import { db } from './firebase/FirebaseConfig';    // Importing the Firestore database instance
 import { addDoc, collection } from 'firebase/firestore';  // Firestore methods for collection and adding documents
 import { useLanguage } from './LanguageContext';
 

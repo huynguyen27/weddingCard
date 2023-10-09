@@ -43,6 +43,8 @@
     width: 550px;
     height: auto;
     object-fit: contain;
+    margin-top: -5px;
+
 }
 
 .nav-wrapper {

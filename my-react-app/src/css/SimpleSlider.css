@@ -1,0 +1,25 @@
+/* Style for the slideshow container */
+.simpleslide100 {
+    position: absolute;
+    /* Set the container's position to absolute */
+    display: flex;
+    /* Use flexbox for layout */
+    z-index: 0;
+    /* Set the z-index to control stacking order */
+    justify-content: center;
+    /* Center-align the content horizontally */
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+}
+
+/* Style for each individual slide item within the slideshow */
+.simpleslide100-item {
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+    position: absolute;
+    /* Set the slide item's position to absolute */
+    background-position: center;
+    /* Center-align the background image */
+    background-size: cover;
+    /* Scale and crop the background image to cover the entire element */
+}

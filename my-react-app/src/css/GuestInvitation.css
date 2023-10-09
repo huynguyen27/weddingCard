@@ -1,0 +1,119 @@
+/* Style for the invitation container */
+.invitation-container {
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: column;
+    /* Arrange content vertically within the container */
+    justify-content: center;
+    /* Center content vertically within the container */
+    align-items: center;
+    /* Center content horizontally within the container */
+    width: 100%;
+    /* Make the container full width */
+    background-color: white;
+    /* Set the background color of the container */
+}
+
+/* Style for the image wrapper */
+.image-wrapper {
+    position: relative;
+    /* Position the image wrapper relative to its container */
+    background-color: white;
+    /* Give it a white background */
+    align-items: center;
+    /* Center-align content vertically within the image wrapper */
+    justify-content: center;
+    /* Center-align content horizontally within the image wrapper */
+    display: flex;
+    /* Use flexbox for layout */
+    overflow: hidden;
+    /* Hide overflow if the image is larger than the wrapper */
+}
+
+/* Style for the image */
+.wedding-image {
+    max-width: 550px;
+    /* Set a maximum width for the image */
+    height: auto;
+    /* Automatically adjust the height based on the aspect ratio */
+    object-fit: cover;
+    /* Scale and crop the image to cover the entire wrapper */
+    object-position: center;
+    /* Center-align the image within the wrapper */
+    /* margin-top: -5px; */
+    /* Optional margin adjustment, currently commented out */
+}
+
+/* Style for the media wrapper (possibly for video) */
+.media-wrapper {
+    background-color: white;
+    /* Give it a white background */
+    align-items: center;
+    /* Center-align content vertically within the media wrapper */
+    justify-content: center;
+    /* Center-align content horizontally within the media wrapper */
+    display: flex;
+    /* Use flexbox for layout */
+}
+
+/* Style for the video */
+.wedding-video {
+    max-width: 550px;
+    /* Set a maximum width for the video */
+    height: auto;
+    /* Automatically adjust the height based on the aspect ratio */
+    object-fit: cover;
+    /* Scale and crop the video to cover the entire wrapper */
+    margin-top: 0px;
+    /* Set the top margin for the video (adjust as needed) */
+}
+
+/* Style for the navigation wrapper (possibly for navigation buttons) */
+.nav-wrapper {
+    position: absolute;
+    /* Position the navigation wrapper absolutely within its container */
+    bottom: 25px;
+    /* Set the bottom position (adjust as needed) */
+    left: 50%;
+    /* Set the left position to center horizontally */
+    transform: translateX(-50%);
+    /* Center the navigation wrapper horizontally */
+    z-index: 2;
+    /* Ensure it appears above other elements */
+    display: flex;
+    /* Use flexbox for layout */
+    gap: 20px;
+    /* Set the gap between navigation buttons */
+}
+
+/* Style for the navigation buttons */
+.nav-button {
+    width: 10px;
+    /* Set the width of the navigation buttons */
+    height: 10px;
+    /* Set the height of the navigation buttons */
+    background-color: #d9d9d9;
+    /* Set the background color of the buttons */
+    border: none;
+    /* Remove button borders */
+    border-radius: 50%;
+    /* Make the buttons circular */
+    cursor: pointer;
+    /* Use a pointer cursor for better user interaction */
+}
+
+/* Style for the active navigation button */
+.nav-button.active {
+    background-color: #555555;
+    /* Change the background color of the active button */
+}
+
+/* For smaller screens, you can add a media query */
+@media only screen and (max-width: 768px) {
+
+    .wedding-video,
+    .wedding-image {
+        width: 100%;
+        /* Make both video and image span the full width on smaller screens */
+    }
+}

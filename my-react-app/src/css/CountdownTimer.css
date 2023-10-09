@@ -1,0 +1,123 @@
+/* This section styles the countdown container */
+.countdown-container {
+    text-align: center;
+    /* Center-align text within the container */
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: column;
+    /* Arrange content vertically within the container */
+    align-items: center;
+    /* Center-align content horizontally within the container */
+    width: 100%;
+    /* Make the container full width */
+    background-color: white;
+    /* Set the background color of the container */
+    position: relative;
+    /* Position the container relative to its parent */
+    /* margin-top: 2px; */
+    /* Optional margin adjustment, currently commented out */
+}
+
+/* This section styles the countdown wrapper */
+.countdown-wrapper {
+    position: relative;
+    /* Position the countdown wrapper relative to its parent */
+    background-color: rgba(0, 0, 0, 0.35);
+    /* Adds a semi-transparent background */
+    width: 55%;
+    /* Set the width of the countdown wrapper */
+    max-width: 550px;
+    /* Set a maximum width for responsiveness */
+    height: 225px;
+    /* Set the height of the countdown wrapper */
+    align-items: center;
+    /* Center-align content horizontally within the wrapper */
+}
+
+/* This section styles the countdown table */
+.countdown-table {
+    width: 100%;
+    /* Make the countdown table span the full width */
+    display: flex;
+    /* Use flexbox for layout */
+    align-items: center;
+    /* Center-align content vertically within the table */
+    justify-content: center;
+    /* Center-align content horizontally within the table */
+    color: white;
+    /* Set the text color within the table */
+}
+
+/* This section styles the "Coming Soon" text */
+.coming-soon {
+    width: 100%;
+    /* Make the "Coming Soon" text span the full width */
+    font-family: 'Lato', sans-serif;
+    /* Set the font family for the text */
+    font-weight: 200;
+    /* Set the font weight */
+    font-size: 42px;
+    /* Set the font size for the text */
+    margin: 16px 0px 4px 0;
+    /* Adjust margin for spacing */
+    color: white;
+    /* Set the text color */
+}
+
+/* This section styles each cell within the countdown */
+.countdown-cell {
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: column;
+    /* Arrange content vertically within each cell */
+    align-items: center;
+    /* Center-align content horizontally within each cell */
+    width: 100px;
+    /* Set the width of each cell */
+    margin: 0 6px;
+    /* Adjust horizontal margin for spacing */
+}
+
+/* This section styles the countdown numbers */
+.countdown-number {
+    font-family: 'Playfair Display', serif;
+    /* Set the font family for the numbers */
+    font-weight: 400;
+    /* Set the font weight */
+    font-style: italic;
+    /* Set italic font style */
+    font-size: 68px;
+    /* Set the font size for the numbers */
+    margin: 0;
+    /* Remove margin for numbers */
+}
+
+/* This section styles the countdown labels */
+.countdown-label {
+    margin-top: 8px;
+    /* Add top margin for spacing between numbers and labels */
+    font-family: serif;
+    /* Set the font family for the labels */
+    font-size: 13px;
+    /* Set the font size for the labels */
+}
+
+/* This section styles the countdown separator (e.g., ":" between numbers) */
+.countdown-separator {
+    font-size: 68px;
+    /* Set the font size for the separator */
+}
+
+/* This is a media query for smaller screens */
+@media only screen and (max-width: 768px) {
+
+    /* Adjust the styles for the countdown wrapper on smaller screens */
+    .countdown-wrapper {
+        width: 100%;
+        /* Make the countdown wrapper span the full width on smaller screens */
+        max-width: 550px;
+        /* Set a maximum width for responsiveness (adjust as needed) */
+        max-height: 225px;
+        /* Set a maximum height for responsiveness (adjust as needed) */
+    }
+}

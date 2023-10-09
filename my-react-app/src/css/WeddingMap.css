@@ -1,0 +1,120 @@
+/* WeddingMap.css */
+
+/* Style for the map container */
+.wedding-map-container {
+    width: 55%;
+    /* Set the width of the map container */
+    max-width: 550px;
+    /* Set a maximum width of 550px for responsiveness */
+    height: 306px;
+    /* Set the height of the map container */
+    margin: 0 auto;
+    /* Center the map horizontally within its parent */
+    margin-top: 3px;
+    /* Add a top margin for spacing */
+    border: 3px solid white;
+    /* Add a white border around the component */
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+    /* Add a subtle shadow to the component */
+}
+
+/* Style for the popup */
+.wedding-popup {
+    text-align: center;
+    /* Center-align text within the popup */
+}
+
+/* Add this CSS rule to keep the button always visible */
+.toggle-button {
+    position: absolute;
+    /* Position the button absolutely within the map container */
+    top: 10px;
+    /* Adjust the top position as needed */
+    right: 10px;
+    /* Adjust the right position as needed */
+    z-index: 999;
+    /* Ensure the button is above the map */
+    background-color: white;
+    /* Button background color */
+    color: black;
+    /* Button text color */
+    padding: 6px 12px;
+    /* Padding inside the button */
+    border-radius: 3px;
+    /* Add rounded corners to the button */
+    border: none;
+    /* Remove button border if needed */
+    cursor: pointer;
+    /* Add a pointer cursor for better user interaction */
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    /* Add an outline shadow around the button */
+}
+
+/* Optionally, add a hover effect for the button */
+.toggle-button:hover {
+    background-color: #f0f0f0;
+    /* Change background color on hover if desired */
+}
+
+/* Style for the redirect button */
+.redirect-button {
+    position: absolute;
+    /* Position the button absolutely within the map container */
+    bottom: 10px;
+    /* Adjust the bottom position as needed */
+    left: 10px;
+    /* Adjust the left position as needed */
+    z-index: 999;
+    /* Ensure the button is above the map */
+    background-color: white;
+    /* Button background color */
+    color: black;
+    /* Button text color */
+    padding: 6px 12px;
+    /* Padding inside the button */
+    border-radius: 3px;
+    /* Add rounded corners to the button */
+    border: none;
+    /* Remove button border if needed */
+    cursor: pointer;
+    /* Add a pointer cursor for better user interaction */
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    /* Add an outline shadow around the button */
+}
+
+/* Optionally, add a hover effect for the redirect button */
+.redirect-button:hover {
+    background-color: #f0f0f0;
+    /* Change background color on hover if desired */
+}
+
+.centered-tooltip {
+    text-align: center;
+    /* Center-align text within the tooltip */
+    font-size: 11px;
+    /* Set the font size for the tooltip */
+    padding: 5px;
+    /* Padding inside the tooltip */
+    background-color: white;
+    /* Background color for the tooltip */
+    border-radius: 5px;
+    /* Add rounded corners to the tooltip */
+    width: auto;
+    /* Allow the tooltip width to adjust based on content */
+    max-width: 420px;
+    /* Set a maximum width for the tooltip */
+    margin-left: 1px;
+    /* Adjust the left margin for positioning */
+    transition: opacity 0.3s ease-in-out;
+    /* Add a smooth opacity transition */
+}
+
+/* For smaller screens, you can add a media query */
+@media only screen and (max-width: 768px) {
+    .wedding-map-container {
+        width: 100%;
+        /* Make the map container full width on smaller screens */
+        max-width: 550px;
+        max-height: 225px;
+    }
+}

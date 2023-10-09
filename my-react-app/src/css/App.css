@@ -1,0 +1,9 @@
+/* Reset CSS for all elements */
+
+/* Apply these styles to all elements (*) */
+
+* {
+    margin: 0; /* Reset margin to 0 */
+    padding: 0; /* Reset padding to 0 */
+    box-sizing: border-box; /* Use border-box box-sizing to include padding and border in element dimensions */
+}

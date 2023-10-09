@@ -3,48 +3,70 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333; /* Change this to your desired background color */
-    color: white; /* Change this to your desired text color */
+    background-color: #333;
+    /* Background color for the navigation bar, adjust as needed */
+    color: white;
+    /* Text color for the navigation bar, adjust as needed */
     padding: 10px 20px;
+    /* Padding around the content within the navigation bar */
 }
 
 /* Style for the "Wedding Cherish" text on the left */
 .left p {
-    font-size: 24px; /* Adjust the font size as needed */
+    font-size: 24px;
+    /* Font size for the "Wedding Cherish" text, adjust as needed */
     font-weight: bold;
+    /* Text weight (bold) for the "Wedding Cherish" text */
 }
 
 /* Style for the language button and options on the right */
 .right button {
-    background-color: #fff; /* Change this to your desired button color */
-    color: #333; /* Change this to your desired button text color */
+    background-color: #fff;
+    /* Background color for the language button, adjust as needed */
+    color: #333;
+    /* Text color for the language button, adjust as needed */
     border: none;
+    /* Remove borders around the button */
     padding: 5px 10px;
+    /* Padding within the button */
     cursor: pointer;
+    /* Change cursor to a pointer on hover to indicate interactivity */
 }
 
 /* Style for the language options dropdown */
 #language-options {
     display: none;
+    /* Initially, hide the language options */
     position: absolute;
-    background-color: #fff; /* Change this to your desired dropdown background color */
+    /* Position the dropdown absolutely for proper placement */
+    background-color: #fff;
+    /* Background color for the dropdown, adjust as needed */
     min-width: 100px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    /* Set a minimum width for the dropdown */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /* Add a shadow effect to the dropdown */
     z-index: 1;
+    /* Ensure the dropdown appears above other elements */
 }
 
 #language-options button {
-    color: #333; /* Change this to your desired link text color */
+    color: #333;
+    /* Text color for the language options, adjust as needed */
     padding: 12px 16px;
+    /* Padding within each language option button */
     text-decoration: none;
+    /* Remove underlines from the language option links */
     display: block;
+    /* Make the language option buttons block-level elements */
 }
 
 #language-options button:hover {
-    background-color: #f2f2f2; /* Change this to your desired hover background color */
+    background-color: #f2f2f2;
+    /* Background color when hovering over a language option */
 }
 
 /* Show the language options when the button is hovered */
 .right:hover #language-options {
     display: block;
+    /* Display the language options when hovering over the button */
 }

@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Main from './Main';
 import GuestInfo from './GuestInfo'; // Assuming you have a GuestInfo component
-import GuestInvitation from './GuestInvitation';
 
 const App = () => {
 	return (

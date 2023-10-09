@@ -6,33 +6,39 @@ import bg04 from './assets/bg04.jpg';  // Importing the image
 import './css/SimpleSlider.css'; // Import your CSS file for styling
 
 const SimpleSlider = () => {
-  const [nowSlide, setNowSlide] = useState(0);
-  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  // State management
+  const [nowSlide, setNowSlide] = useState(0); // Current slide index
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth); // Current viewport width
 
-  const itemSlide = [bg01, bg02, bg03, bg04 ];  // Use imported images
+  // Array of slide images
+  const itemSlide = [bg01, bg02, bg03, bg04 ];
 
-  const delay = 6000;
-  const speed = 1000; 
+  // Slide transition settings
+  const delay = 6000; // Delay between slides in milliseconds
+  const speed = 1000; // Transition speed between slides in milliseconds
 
   useEffect(() => {
+    // Automatic slide change using setInterval
     const intervalId = setInterval(() => {
       setNowSlide((prevSlide) => (prevSlide + 1) % itemSlide.length);
     }, delay);
 
-    // Update viewport width on resize
+    // Update viewport width on window resize
     const handleResize = () => {
       setViewportWidth(window.innerWidth);
     };
 
+    // Add event listener for window resize
     window.addEventListener('resize', handleResize);
 
+    // Cleanup: Clear interval and remove event listener
     return () => {
       clearInterval(intervalId);
       window.removeEventListener('resize', handleResize);
     };
   }, []);
 
-  // Calculate the desired width and height based on viewport width
+  // Calculate the desired width and height for slider items based on viewport width
   const calculateWidthAndHeight = useCallback(() => {
     // Adjust these values based on your design requirements
     if (viewportWidth <= 768) {
@@ -58,10 +64,12 @@ const SimpleSlider = () => {
     }
   }, [viewportWidth]);
 
+  // Calculate the style for each slider item
   const sliderItemStyle = calculateWidthAndHeight();
 
   return (
     <div className="simpleslide100">
+      {/* Map through slide images and apply styles */}
       {itemSlide.map((slide, index) => (
         <div
           key={index}

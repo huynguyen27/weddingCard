@@ -19,17 +19,18 @@ const customIcon = new L.Icon({
 // Address variable
 const address = 'White Palace, 194 Hoang Van Thu Street, Ward 9, Phu Nhuan District';
 
-
 // WeddingMap React functional component
 const WeddingMap = () => {
   // Setting initial map position using latitude and longitude coordinates
   const position = [10.8000, 106.6743];
   const [isTooltipVisible, setTooltipVisible] = useState(true); // Tooltip is initially visible
 
+  // Toggle the tooltip's visibility
   const toggleTooltip = () => {
     setTooltipVisible(!isTooltipVisible);
   };
 
+  // Hide the tooltip
   const hideTooltip = () => {
     setTooltipVisible(false);
   };
@@ -41,7 +42,7 @@ const WeddingMap = () => {
     }
   }, [isTooltipVisible]);
 
-
+  // Redirect to Google Maps when the button is clicked
   const redirectToGoogleMaps = () => {
     // Replace spaces in the address with "+" and encode it for the URL
     const encodedAddress = encodeURIComponent(address);
@@ -71,19 +72,20 @@ const WeddingMap = () => {
           position={position}  // Marker position
           icon={customIcon}  // Using the custom icon
         >
+          {/* Button to toggle the tooltip visibility */}
           <button className="toggle-button" onClick={toggleTooltip}>{!isTooltipVisible ? `Show Address` : `Hide Address`}</button>
+
+          {/* Button to open Google Maps */}
           <button className="redirect-button" onClick={redirectToGoogleMaps}>Google Map</button>
 
+          {/* Tooltip component */}
           {isTooltipVisible && (
             <Tooltip className="centered-tooltip" permanent direction="bottom">
               <div className="address-box">{address}</div>
             </Tooltip>
           )}
-
-
         </Marker>
       </MapContainer>
-
     </div>
   );
 };

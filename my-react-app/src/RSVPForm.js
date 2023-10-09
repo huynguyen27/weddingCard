@@ -125,7 +125,6 @@ const RSVPForm = () => {
         </div>
         {formErrors.name && <span className="error-text">{formErrors.name}</span>}
 
-
         <div className="form-group">
           <label>{labels.termsLabel}</label>
           <select name="terms_of_address" onChange={handleChange}>

@@ -1,7 +1,7 @@
 /* WeddingMap.css */
 /* Style for the map container */
 .wedding-map-container {
-    width: 100%;
+    width: 55%;
     max-width: 550px;
     /* Set a maximum width of 550px */
     height: 306px;
@@ -91,4 +91,13 @@
     margin-left: 1px;
     transition: opacity 0.3s ease-in-out;
     /* Adjust the transition duration to 0.5s */
+}
+
+/* For smaller screens, you can add a media query */
+@media only screen and (max-width: 768px) {
+    .wedding-map-container {
+        width: 100%;
+        max-width: '550px';
+        max-height: '225px';
+    }
 }

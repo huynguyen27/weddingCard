@@ -23,7 +23,7 @@ const address = 'White Palace, 194 Hoang Van Thu Street, Ward 9, Phu Nhuan Distr
 // WeddingMap React functional component
 const WeddingMap = () => {
   // Setting initial map position using latitude and longitude coordinates
-  const position = [10.800138493663958, 106.67480762278619];
+  const position = [10.8000, 106.6743];
   const [isTooltipVisible, setTooltipVisible] = useState(true); // Tooltip is initially visible
 
   const toggleTooltip = () => {

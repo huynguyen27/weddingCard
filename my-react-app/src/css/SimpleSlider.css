@@ -3,12 +3,14 @@
     display: flex;
     z-index: 0;
     justify-content: center;
+    box-sizing: border-box;
+
 }
 
 .simpleslide100-item {
+    box-sizing: border-box;
     position: absolute;
-    width: 550px;
-    height: 225px;
     background-position: center;
     background-size: cover;
+  
 }

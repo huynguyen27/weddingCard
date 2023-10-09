@@ -16,42 +16,49 @@
 
 /* Wrap the image and give white background */
 .image-wrapper {
-    position: relative; 
+    position: relative;
     background-color: white;
-    width: 550px;
-    height: 775px; 
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    /* Use Flexbox */
+    overflow: hidden;
+    /* Hide overflow if the image is larger */
 }
 
 /* Style the image */
 .wedding-image {
-    width: 550px;
-    height: 775px; 
-    object-fit: cover;  /* Cover the wrapper entirely */
-    object-position: center;  /* Clip from the center */
-    margin-top: -5px;
+    max-width: 550px;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    /* margin-top: -5px; */
 }
 
 /* Wrap the video and give white background */
 .media-wrapper {
     background-color: white;
-    width: 550px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    /* Use Flexbox */
 
 }
 
 /* Style the video */
 .wedding-video {
-    width: 550px;
+    max-width: 550px;
     height: auto;
     object-fit: contain;
     margin-top: -5px;
-
 }
 
 .nav-wrapper {
     position: absolute;
     bottom: 25px;
     left: 50%;
-    transform: translateX(-50%);  /* This will center the whole nav-wrapper */
+    transform: translateX(-50%);
+    /* This will center the whole nav-wrapper */
     z-index: 2;
     display: flex;
     gap: 20px;
@@ -61,30 +68,21 @@
 .nav-button {
     width: 10px;
     height: 10px;
-    background-color: #ccc;
+    background-color: #d9d9d9;
     border: none;
     border-radius: 50%;
     cursor: pointer;
 }
 
 .nav-button.active {
-    background-color: #444;
+    background-color: #555555;
 }
-
-/* .wedding-image {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.wedding-image.show {
-    opacity: 1;
-} */
 
 /* For smaller screens, you can add a media query */
 @media only screen and (max-width: 768px) {
+
     .wedding-video,
     .wedding-image {
         width: 100%;
-        /* Full width */
     }
 }

@@ -28,16 +28,19 @@ const GuestInvitation = () => {
           <source src={weddingVideo1} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+      </div>
+      <div className="media-wrapper">
         <video className="wedding-video" autoPlay loop muted>
           <source src={weddingVideo2} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+      </div>
+      <div className="media-wrapper">
         <video className="wedding-video" autoPlay loop muted>
           <source src={weddingVideo3} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
-
       <h1>Photo Gallery</h1>
       <div className="image-wrapper">
         <img className="wedding-image" src={images[currentIndex]} alt="Wedding cover design" />

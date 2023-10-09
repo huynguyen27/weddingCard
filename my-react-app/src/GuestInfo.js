@@ -5,6 +5,7 @@ import { db } from './firebase/FirebaseConfig';
 import GuestInvitation from './GuestInvitation.js';
 import CountdownTimer from './CountdownTimer.js';
 import WeddingMap from './WeddingMap.js';
+import SimpleSlider from './SimpleSilder';
 
 const GuestInfo = () => {
   const { guestId } = useParams();

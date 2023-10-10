@@ -111,17 +111,19 @@
 .guest-invitation-name {
     display: flex;
     position: absolute;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Futura', serif;
     top: 1835px;
     color: #665D3C;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
+    font-style:italic;
 }
 
 .photo-gallery-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Futura', sans-serif;
     color: #665D3C;
     font-size: 34px;
+    font-weight:200;
     margin-top: 16px;
     margin-bottom: 12px;
 

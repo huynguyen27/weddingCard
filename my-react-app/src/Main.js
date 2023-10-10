@@ -9,7 +9,6 @@ const Main = () => {
       <NavigationBar />
       <RSVPForm />
       <GuestList />
-
     </div>
   );
 };

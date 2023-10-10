@@ -13,7 +13,7 @@ const CountdownTimer = () => {
 
   useEffect(() => {
     // Calculate the target date and time for the countdown
-    const targetDate = new Date('2023-12-13T09:00:00+07:00').getTime();
+    const targetDate = new Date('2023-11-05T18:00:00+07:00').getTime();
 
     // Set up a timer using setInterval to update the countdown
     const timerId = setInterval(() => {

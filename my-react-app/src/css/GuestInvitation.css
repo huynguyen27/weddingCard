@@ -10,7 +10,7 @@
     /* Center content horizontally within the container */
     width: 100%;
     /* Make the container full width */
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0); /* Transparent background */
     /* Set the background color of the container */
 }
 
@@ -92,7 +92,7 @@
     /* Set the width of the navigation buttons */
     height: 10px;
     /* Set the height of the navigation buttons */
-    background-color: #d9d9d9;
+    background-color: #fceee2c9;
     /* Set the background color of the buttons */
     border: none;
     /* Remove button borders */
@@ -104,8 +104,29 @@
 
 /* Style for the active navigation button */
 .nav-button.active {
-    background-color: #555555;
+    background-color: #ffe5ce;
     /* Change the background color of the active button */
+}
+
+.guest-invitation-name {
+    display: flex;
+    position: absolute;
+    font-family: 'Futura', serif;
+    top: 1835px;
+    color: #665D3C;
+    font-size: 20px;
+    font-weight: 700;
+    font-style:italic;
+}
+
+.photo-gallery-title {
+    font-family: 'Futura', sans-serif;
+    color: #665D3C;
+    font-size: 34px;
+    font-weight:200;
+    margin-top: 16px;
+    margin-bottom: 12px;
+
 }
 
 /* For smaller screens, you can add a media query */

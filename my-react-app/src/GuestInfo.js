@@ -5,6 +5,7 @@ import { db } from './firebase/FirebaseConfig'; // Importing Firebase configurat
 import GuestInvitation from './GuestInvitation.js'; // Importing a GuestInvitation component
 import CountdownTimer from './CountdownTimer.js'; // Importing a CountdownTimer component
 import WeddingMap from './WeddingMap.js'; // Importing a WeddingMap component
+import './css/GuestInfo.css'; // Importing the CSS file
 
 const GuestInfo = () => {
   // Retrieve the guestId from the URL parameters using react-router-dom
@@ -40,19 +41,21 @@ const GuestInfo = () => {
   }, [guestInfo]);
 
   return (
-    <div>
-      {guestInfo ? (
-        // Render GuestInvitation, CountdownTimer, and WeddingMap components when guestInfo is available
-        <>
-          <GuestInvitation />
-          <CountdownTimer />
-          <WeddingMap />
-        </>
-      ) : (
-        // Display "Loading..." when guestInfo is still being fetched
-        <p>Loading...</p>
-      )}
-    </div>
+    <>
+      <div className="guest-info-container">
+        {guestInfo ? (
+          // Render GuestInvitation, CountdownTimer, and WeddingMap components when guestInfo is available
+          <>
+            <GuestInvitation guestName={guestInfo.name} guestTOA={guestInfo.terms_of_address} />
+            <CountdownTimer />
+            <WeddingMap />
+          </>
+        ) : (
+          // Display "Loading..." when guestInfo is still being fetched
+          <p>Loading...</p>
+        )}
+      </div>
+    </>
   );
 };
 

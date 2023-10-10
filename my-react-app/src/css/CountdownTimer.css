@@ -10,7 +10,7 @@
     /* Center-align content horizontally within the container */
     width: 100%;
     /* Make the container full width */
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0); /* Transparent background */
     /* Set the background color of the container */
     position: relative;
     /* Position the container relative to its parent */

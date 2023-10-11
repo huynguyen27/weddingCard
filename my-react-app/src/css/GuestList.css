@@ -1,0 +1,70 @@
+.center-heading {
+    text-align: center;
+    margin-top: 50px; /* Adjust the margin-top value to control vertical alignment */
+    font-family: "Futura", sans-serif;
+    font-weight: 700;
+    font-size: large;
+    padding-top: -20px;
+    padding-bottom: 20px;
+  }
+  
+
+.custom-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+.custom-table th, .custom-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  
+.custom-table th {
+    background-color: #f2f2f2;
+  }
+  
+
+.copy-button{
+    color: white;
+    background: black;
+    margin-right: 35px;
+    border-style: double;
+    font-family: "Futura", sans-serif;
+    font-weight: 700;
+    font-size: large;
+    padding: 3px;
+    border-color: black;
+}
+
+.copy-button:hover{
+    color:black;
+    background: white;
+    border-style: double;
+    border-color: black;
+}
+
+.delete-button{
+    color: white;
+    background: red;
+    margin-right: 15px;
+    border-style: double;
+    font-family: "Futura", sans-serif;
+    font-weight: 700;
+    font-size: large;
+    padding: 3px;
+    border-color: black;
+}
+
+.delete-button:hover{
+    color:black;
+    background: yellow;
+    border-style: double;
+    border-color: black;
+}
+
+.copy-status{
+    color: green;
+    margin-left: -30px;
+
+}

@@ -10,7 +10,8 @@
     /* Center-align content horizontally within the container */
     width: 100%;
     /* Make the container full width */
-    background-color: rgba(0, 0, 0, 0); /* Transparent background */
+    background-color: rgba(0, 0, 0, 0);
+    /* Transparent background */
     /* Set the background color of the container */
     position: relative;
     /* Position the container relative to its parent */
@@ -22,8 +23,6 @@
 .countdown-wrapper {
     position: relative;
     /* Position the countdown wrapper relative to its parent */
-    background-color: rgba(0, 0, 0, 0.2);
-    /* Adds a semi-transparent background */
     width: 55%;
     /* Set the width of the countdown wrapper */
     max-width: 550px;
@@ -60,7 +59,7 @@
     /* Set the font size for the text */
     margin: 12px 0px 0px 0;
     /* Adjust margin for spacing */
-    color: white;
+    color: #492D0B;
     /* Set the text color */
 }
 
@@ -76,6 +75,7 @@
     /* Set the width of each cell */
     margin: 0 6px;
     /* Adjust horizontal margin for spacing */
+
 }
 
 /* This section styles the countdown numbers */
@@ -90,6 +90,8 @@
     /* Set the font size for the numbers */
     margin: 0;
     /* Remove margin for numbers */
+    color: #492D0B;
+    /* Set the text color */
 
 }
 
@@ -101,12 +103,18 @@
     /* Set the font family for the labels */
     font-size: 13px;
     /* Set the font size for the labels */
+    color: #492D0B;
+    /* Set the text color */
+
 }
 
 /* This section styles the countdown separator (e.g., ":" between numbers) */
 .countdown-separator {
     font-size: 68px;
     /* Set the font size for the separator */
+    color: #492D0B;
+    /* Set the text color */
+
 }
 
 /* This is a media query for smaller screens */

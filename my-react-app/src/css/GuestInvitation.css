@@ -111,8 +111,7 @@
 .guest-invitation-name {
     display: flex;
     position: absolute;
-    font-family: 'Futura', serif;
-    top: 1835px;
+    font-family: 'Cormorant Garamond', serif;
     color: #665D3C;
     font-size: 20px;
     font-weight: 700;
@@ -131,10 +130,14 @@
 
 /* For smaller screens, you can add a media query */
 @media only screen and (max-width: 768px) {
-
     .wedding-video,
     .wedding-image {
         width: 100%;
         /* Make both video and image span the full width on smaller screens */
+    }
+
+    .guest-invitation-name {
+        font-size: 13px;
+        font-weight: 500;
     }
 }

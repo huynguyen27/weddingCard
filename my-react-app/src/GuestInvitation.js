@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './css/GuestInvitation.css';
 import weddingVideo from './assets/wedding-vid.mp4';
 import weddingCover1 from './assets/wed-img-1.jpg';
@@ -11,6 +11,8 @@ const GuestInvitation = ({ guestName, guestTOA }) => {
   const [touchStartX, setTouchStartX] = useState(null);
 
   const images = [weddingCover4, weddingCover1, weddingCover2, weddingCover3, weddingCover4];
+  
+  const videoRef = useRef(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -58,10 +60,45 @@ const GuestInvitation = ({ guestName, guestTOA }) => {
     }
   };
 
+  const calculateVideoHeight = () => {
+    const video = videoRef.current;
+    if (video) {
+      const videoWidth = video.videoWidth;
+      const videoHeight = video.videoHeight;
+  
+      // Calculate the aspect ratio
+      const aspectRatio = videoWidth / videoHeight;
+  
+      // Set the height based on the desired width (e.g., 100% of the container width)
+      const desiredWidth = video.offsetWidth; // You can customize this as needed
+      const desiredHeight = desiredWidth / aspectRatio;
+  
+      video.style.height = `${desiredHeight}px`;
+  
+      // Set the top position for .guest-invitation-name
+      const guestNameElement = document.querySelector('.guest-invitation-name');
+      const topPosition = desiredHeight * 0.793;
+      guestNameElement.style.top = `${topPosition}px`;
+  
+      // Remove the event listener to avoid multiple executions
+      video.removeEventListener('loadedmetadata', calculateVideoHeight);
+    }
+  };
+  
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.addEventListener('loadedmetadata', calculateVideoHeight);
+      video.play().catch((error) => {
+      });
+    }
+  }, []);
+  
+
   return (
     <div className="invitation-container">
       <div className="media-wrapper">
-        <video className="wedding-video" autoPlay muted playsInline>
+        <video ref={videoRef} className="wedding-video" autoPlay muted playsInline>
           <source src={weddingVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>

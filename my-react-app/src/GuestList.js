@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { db } from './firebase/FirebaseConfig';
 import { collection, doc, deleteDoc, onSnapshot } from 'firebase/firestore';
 import { Link } from 'react-router-dom';
+import './css/GuestList.css';
 
 
 const GuestList = () => {
@@ -46,29 +47,41 @@ const GuestList = () => {
       setCopySuccess({ status: 'Failed to copy text', id });
     });
   };
-
   return (
     <div>
-      <h2>Tất Cả Các Khách</h2>
-      <ul>
-        {guests.map((guest, index) => (
-          <li key={index}>
-            <span>Tên Khách: {guest.name}, </span>
-            <span>Xưng Hô: {guest.terms_of_address}, </span>
-            {/* Updated Line: Wrap the guest id inside a Link component */}
-            <Link to={`/guest/${guest.id}`}>
-              <span>Link</span>
-            </Link>
-            <span> {window.location.origin}/guest/{guest.id}</span>
-            <button onClick={() => copyToClipboard(`${window.location.origin}/guest/${guest.id}`, guest.id)}>
-              Copy
-            </button>
-            {copySuccess.status && copySuccess.id === guest.id && <span style={{ color: 'green' }}>{copySuccess.status}</span>}
+     <div className="center-heading">         <h2>Guest List</h2>
 
-            <button onClick={() => handleDelete(guest.id)}>Delete</button>
-          </li>
-        ))}
-      </ul>
+ </div>
+
+      
+      <table className='custom-table'>
+        <thead>
+          <tr>
+            <th>Tên Khách</th>
+            <th>Link</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {guests.map((guest, index) => (
+            <tr key={index}>
+              <td>{guest.terms_of_address} {guest.name}</td>
+              <td>
+                <Link to={`/guest/${guest.id}`}>
+                  {window.location.origin}/guest/{guest.id}
+                </Link>
+              </td>
+              <td>
+                <button className='copy-button'onClick={() => copyToClipboard(`${window.location.origin}/guest/${guest.id}`, guest.id)}>
+                  Copy
+                </button>
+                {copySuccess.status && copySuccess.id === guest.id && <span className="copy-status">{copySuccess.status}</span>}
+                <button className='delete-button' onClick={() => handleDelete(guest.id)}>Delete</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };

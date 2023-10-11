@@ -1,8 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import bg01 from './assets/bg01.jpg';  // Importing the image
-import bg02 from './assets/bg02.jpg';  // Importing the image
-import bg03 from './assets/bg03.jpg';  // Importing the image
-import bg04 from './assets/bg04.jpg';  // Importing the image
+import bg01 from './assets/bg01.png';  // Importing the image
 import './css/SimpleSlider.css'; // Import your CSS file for styling
 
 const SimpleSlider = () => {
@@ -11,7 +8,7 @@ const SimpleSlider = () => {
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth); // Current viewport width
 
   // Array of slide images
-  const itemSlide = [bg01, bg02, bg03, bg04 ];
+  const itemSlide = [bg01, bg01];
 
   // Slide transition settings
   const delay = 6000; // Delay between slides in milliseconds

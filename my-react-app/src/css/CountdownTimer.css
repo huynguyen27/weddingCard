@@ -22,7 +22,7 @@
 .countdown-wrapper {
     position: relative;
     /* Position the countdown wrapper relative to its parent */
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgba(0, 0, 0, 0.2);
     /* Adds a semi-transparent background */
     width: 55%;
     /* Set the width of the countdown wrapper */
@@ -56,9 +56,9 @@
     /* Set the font family for the text */
     font-weight: 200;
     /* Set the font weight */
-    font-size: 42px;
+    font-size: 44px;
     /* Set the font size for the text */
-    margin: 16px 0px 4px 0;
+    margin: 12px 0px 0px 0;
     /* Adjust margin for spacing */
     color: white;
     /* Set the text color */
@@ -86,17 +86,18 @@
     /* Set the font weight */
     font-style: italic;
     /* Set italic font style */
-    font-size: 68px;
+    font-size: 72px;
     /* Set the font size for the numbers */
     margin: 0;
     /* Remove margin for numbers */
+
 }
 
 /* This section styles the countdown labels */
 .countdown-label {
     margin-top: 8px;
     /* Add top margin for spacing between numbers and labels */
-    font-family: serif;
+    font-family: 'Playfair Display', serif;
     /* Set the font family for the labels */
     font-size: 13px;
     /* Set the font size for the labels */

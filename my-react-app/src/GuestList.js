@@ -49,11 +49,11 @@ const GuestList = () => {
   };
   return (
     <div>
-     <div className="center-heading">         <h2>Guest List</h2>
+      <div className="center-heading">
+        <h2>Guest List</h2>
+      </div>
 
- </div>
 
-      
       <table className='custom-table'>
         <thead>
           <tr>
@@ -72,7 +72,7 @@ const GuestList = () => {
                 </Link>
               </td>
               <td>
-                <button className='copy-button'onClick={() => copyToClipboard(`${window.location.origin}/guest/${guest.id}`, guest.id)}>
+                <button className='copy-button' onClick={() => copyToClipboard(`${window.location.origin}/guest/${guest.id}`, guest.id)}>
                   Copy
                 </button>
                 {copySuccess.status && copySuccess.id === guest.id && <span className="copy-status">{copySuccess.status}</span>}

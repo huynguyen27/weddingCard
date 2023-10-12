@@ -65,3 +65,35 @@ export const deleteGuest = async (id) => {
   // Delete the guest document from Firestore
   await deleteDoc(guestDoc);
 };
+
+export const usePassword = () => {
+  const [passwordData, setPasswordData] = useState([]);
+  const passwordsCollectionRef = collection(db, "passwords");
+
+  useEffect(() => {
+    const unsubscribe = onSnapshot(passwordsCollectionRef, (snapshot) => {
+      if (!snapshot.empty) {
+        const passwordDoc = snapshot.docs[0];
+        setPasswordData({
+          // id: passwordDoc.id,
+          password: passwordDoc.data().password,
+        });
+      }
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, [passwordsCollectionRef]);
+
+  return passwordData;
+};
+
+// Custom React hook to validate a password
+export const usePasswordValidator = () => {
+  const { password } = usePassword();
+
+  const validatePassword = (enteredPassword) => enteredPassword === password;
+
+  return validatePassword;
+};

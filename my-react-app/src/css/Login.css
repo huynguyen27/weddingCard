@@ -1,0 +1,70 @@
+/* Login.css */
+.login-container {
+    background-color: #fceee2;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    padding: 25px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    max-width: 450px;
+    width: 90%;
+}
+
+.login-card h1 {
+    padding: 0px;
+    text-align: center;
+    color: #665D3C;
+    font-family: 'futura', sans-serif;
+
+}
+
+.login-form {
+    width: 100%;
+    padding: 12px 10px;
+    margin-bottom: 10px;
+    color: #665D3C;
+    font-family: 'futura', sans-serif;
+
+}
+
+.login-input {
+    width: 100%;
+    padding: 10px 8px;
+    border: 2px solid #ccc;
+    margin: 10px 0px 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s ease;
+    font-size: 18px;
+}
+
+.login-input:focus {
+    outline: none;
+    border-color: #0078d4; /* A different color when focused */
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #fceee2;
+    border: none;
+    cursor: pointer;
+    color: #665D3C;
+    font-family: 'futura', sans-serif;
+    font-size: 14px;
+}
+
+.error-message {
+    padding-left: 10px;
+    margin-top: -15px;
+    color: red;
+    font-family: 'futura', sans-serif;
+    font-size: 13px;
+    font-style: italic;
+}

@@ -17,14 +17,19 @@ const GuestInvitation = ({ guestName, guestTOA }) => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 6000);
+    }, 5000);
 
     return () => clearInterval(timer);
   }, [images.length]);
 
-  const capitalizeFirstLetter = (str) => {
-    return str.charAt(0).toUpperCase() + str.slice(1);
+  const capitalizeEachWord = (str) => {
+    const words = str.split(' '); // Split the string into words
+    const capitalizedWords = words.map((word) => {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    });
+    return capitalizedWords.join(' '); // Join the words back together with spaces
   };
+  
 
   const handleSwipe = (event) => {
     const deltaX = event.deltaX;
@@ -104,7 +109,7 @@ const GuestInvitation = ({ guestName, guestTOA }) => {
         </video>
       </div>
       <div className="guest-invitation-name">
-        {capitalizeFirstLetter(guestTOA)} {capitalizeFirstLetter(guestName)}
+        {capitalizeEachWord(guestTOA)} {capitalizeEachWord(guestName)}
       </div>
       <h1 className="photo-gallery-title">Photo Gallery</h1>
       <div

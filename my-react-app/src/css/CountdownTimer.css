@@ -80,9 +80,9 @@
 
 /* This section styles the countdown numbers */
 .countdown-number {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     /* Set the font family for the numbers */
-    font-weight: 400;
+    font-weight: 600;
     /* Set the font weight */
     font-style: italic;
     /* Set italic font style */
@@ -99,9 +99,10 @@
 .countdown-label {
     margin-top: 8px;
     /* Add top margin for spacing between numbers and labels */
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     /* Set the font family for the labels */
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: 700;
     /* Set the font size for the labels */
     color: #492D0B;
     /* Set the text color */

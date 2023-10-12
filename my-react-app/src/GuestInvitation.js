@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './css/GuestInvitation.css';
 import weddingImage from './assets/wedding-img.jpg';
-import weddingVideo from './assets/wedding-vid.mp4';
 import weddingCover1 from './assets/wed-img-1.jpg';
 import weddingCover2 from './assets/wed-img-2.jpg';
 import weddingCover3 from './assets/wed-img-3.jpg';
@@ -10,9 +9,8 @@ import weddingCover4 from './assets/wed-img-4.jpg';
 const GuestInvitation = ({ guestName, guestTOA }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStartX, setTouchStartX] = useState(null);
-  const [videoErrorFlag, setVideoErrorFlag] = useState(true); // State for handling video errors
 
-  const images = [weddingCover4, weddingCover1, weddingCover2, weddingCover3, weddingCover4];
+  const images = [weddingCover4, weddingCover1, weddingCover2, weddingCover3];
 
   const videoRef = useRef(null);
 
@@ -30,11 +28,6 @@ const GuestInvitation = ({ guestName, guestTOA }) => {
       return word.charAt(0).toUpperCase() + word.slice(1);
     });
     return capitalizedWords.join(' '); // Join the words back together with spaces
-  };
-
-  const handleVideoError = () => {
-    // Handle video load errors by setting the error flag
-    setVideoErrorFlag(true);
   };
 
   const handleSwipe = (event) => {
@@ -100,35 +93,21 @@ const GuestInvitation = ({ guestName, guestTOA }) => {
     const video = videoRef.current;
     if (video) {
       video.addEventListener('loadedmetadata', calculateVideoHeight);
-      video.addEventListener('error', handleVideoError);
-      video.play().catch((error) => {
-        handleVideoError();
-      });
     }
   }, []);
-
 
   return (
     <div className="invitation-container">
       <div className="media-wrapper">
-        <video
+        <img
           ref={videoRef}
           className="wedding-video"
-          autoPlay
-          muted
-          playsInline
-          onCanPlay={() => {
-            // Video has successfully loaded and can be displayed
-            // Reset the error flag to hide the image
-            setVideoErrorFlag(false);
-          }}
+          alt=""
         >
-          <source src={weddingVideo} type="video/mp4" />
+          <source src={weddingImage} type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </img>
       </div>
-
-      {videoErrorFlag && <img className="wedding-image" src={weddingImage} alt="" />}
 
       <div className="guest-invitation-name">
         {capitalizeEachWord(guestTOA)} {capitalizeEachWord(guestName)}

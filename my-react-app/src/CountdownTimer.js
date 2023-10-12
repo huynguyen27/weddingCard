@@ -61,17 +61,17 @@ const CountdownTimer = () => {
           <div className="countdown-separator">:</div>
           <div className="countdown-cell">
             <p className="countdown-number">{timeLeft.hours}</p>
-            <p className="countdown-label">Hr</p>
+            <p className="countdown-label">Hours</p>
           </div>
           <div className="countdown-separator">:</div>
           <div className="countdown-cell">
             <p className="countdown-number">{timeLeft.minutes}</p>
-            <p className="countdown-label">Min</p>
+            <p className="countdown-label">Minutes</p>
           </div>
           <div className="countdown-separator">:</div>
           <div className="countdown-cell">
             <p className="countdown-number">{timeLeft.seconds}</p>
-            <p className="countdown-label">Sec</p>
+            <p className="countdown-label">Seconds</p>
           </div>
         </div>
       </div>

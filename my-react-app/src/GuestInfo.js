@@ -48,7 +48,10 @@ const GuestInfo = () => {
           <>
             <GuestInvitation guestName={guestInfo.name} guestTOA={guestInfo.terms_of_address} />
             <CountdownTimer />
-            <WeddingMap />
+            <div style={{ backgroundColor: '#fceee24d' }}>
+              <WeddingMap />
+            </div>
+
           </>
         ) : (
           // Display "Loading..." when guestInfo is still being fetched

@@ -12,7 +12,7 @@ const GuestInvitation = ({ guestName, guestTOA }) => {
 
   const images = [weddingCover4, weddingCover1, weddingCover2, weddingCover3];
 
-  const videoRef = useRef(null);
+  const imageRef = useRef(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -64,49 +64,48 @@ const GuestInvitation = ({ guestName, guestTOA }) => {
     }
   };
 
-  const calculateVideoHeight = () => {
-    const video = videoRef.current;
-    if (video) {
-      const videoWidth = video.videoWidth;
-      const videoHeight = video.videoHeight;
-
+  const calculateImageHeight = () => {
+    const image = imageRef.current;
+    if (image) {
+      const imageWidth = image.naturalWidth; // Use naturalWidth for images
+      const imageHeight = image.naturalHeight; // Use naturalHeight for images
+  
       // Calculate the aspect ratio
-      const aspectRatio = videoWidth / videoHeight;
-
+      const aspectRatio = imageWidth / imageHeight;
+  
       // Set the height based on the desired width (e.g., 100% of the container width)
-      const desiredWidth = video.offsetWidth; // You can customize this as needed
+      const desiredWidth = image.offsetWidth; // You can customize this as needed
       const desiredHeight = desiredWidth / aspectRatio;
-
-      video.style.height = `${desiredHeight}px`;
-
+  
+      image.style.height = `${desiredHeight}px`;
+  
       // Set the top position for .guest-invitation-name
       const guestNameElement = document.querySelector('.guest-invitation-name');
       const topPosition = desiredHeight * 0.793;
       guestNameElement.style.top = `${topPosition}px`;
-
+  
       // Remove the event listener to avoid multiple executions
-      video.removeEventListener('loadedmetadata', calculateVideoHeight);
+      image.removeEventListener('load', calculateImageHeight);
     }
   };
-
+  
   useEffect(() => {
-    const video = videoRef.current;
-    if (video) {
-      video.addEventListener('loadedmetadata', calculateVideoHeight);
+    const image = imageRef.current;
+    if (image) {
+      image.addEventListener('load', calculateImageHeight);
     }
   }, []);
+  
 
   return (
     <div className="invitation-container">
       <div className="media-wrapper">
         <img
-          ref={videoRef}
-          className="wedding-video"
+          ref={imageRef}
+          className="wedding-image"
           alt=""
-        >
-          <source src={weddingImage} type="video/mp4" />
-          Your browser does not support the video tag.
-        </img>
+          src={weddingImage}
+        />
       </div>
 
       <div className="guest-invitation-name">
